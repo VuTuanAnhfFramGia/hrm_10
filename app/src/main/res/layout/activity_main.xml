@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,29 +7,69 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.framgia.hrm_10.MainActivity">
+    tools:context="com.example.framgia.hrm_10.View.MainActivity">
 
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:fillViewport="true">
-        <ListView
+        android:layout_height="600dp">
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/listView" >
+            android:id="@+id/imageView"
+            android:src="@drawable/logo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView"
-                />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/app_name"
+            android:id="@+id/textView"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true" />
 
-        </ListView>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/user"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp" />
 
-    </ScrollView>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:hint="@string/pass"
+            android:id="@+id/editText2"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
 
-</RelativeLayout>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:id="@+id/button"
+            android:layout_below="@+id/editText2"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Create an Account"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/button"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</ScrollView>

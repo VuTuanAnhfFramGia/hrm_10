@@ -160,4 +160,15 @@ public class DBHelper extends SQLiteOpenHelper {
         // return count
         return cursor.getCount();
     }
+    public int login(String name,String pass){
+        if (name.equals("admin")&&pass.equals("admin")){
+            // admin
+            return 1;
+        }else if(name.equals("")&&pass.equals("")){
+            // normal
+            return 2;
+        }
+            // not
+            return 0;
+    }
 }
